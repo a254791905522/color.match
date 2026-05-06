@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy — Color Match Shot</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Unbounded:wght@600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --night: #0c0e1a;
+            --text: #f4f6ff;
+            --muted: rgba(244, 246, 255, 0.8);
+            --coral: #ff6b4a;
+            --sun: #ffd93d;
+            --mint: #4ee4c3;
+            --violet: #a855f7;
+            --sky: #38bdf8;
+            --card: rgba(22, 26, 48, 0.82);
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+            color: var(--text);
+            min-height: 100vh;
+            background:
+                radial-gradient(circle at 20% 30%, rgba(168, 85, 247, 0.18), transparent 50%),
+                radial-gradient(circle at 85% 70%, rgba(255, 107, 74, 0.16), transparent 48%),
+                linear-gradient(175deg, var(--night), #12162a 55%, #0e1020);
+            padding: 28px 16px 60px;
+        }
+
+        .layout {
+            width: min(720px, 100%);
+            margin: 0 auto;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 8px 8px 32px;
+        }
+
+        .kicker {
+            font-family: 'Unbounded', sans-serif;
+            font-size: 0.68rem;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: var(--sun);
+            margin-bottom: 14px;
+        }
+
+        h1 {
+            font-family: 'Unbounded', sans-serif;
+            font-weight: 700;
+            font-size: clamp(1.65rem, 4.5vw, 2.25rem);
+            line-height: 1.12;
+            background: linear-gradient(95deg, #fff, var(--mint), var(--violet));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .sub {
+            margin-top: 16px;
+            font-size: 0.95rem;
+            color: var(--muted);
+            line-height: 1.65;
+            max-width: 560px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .snapshot {
+            margin-top: 28px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+            list-style: none;
+        }
+
+        .pill {
+            font-size: 0.82rem;
+            font-weight: 600;
+            padding: 10px 16px;
+            border-radius: 999px;
+            border: 1px solid rgba(255, 255, 255, 0.14);
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--muted);
+        }
+
+        .pill strong {
+            color: var(--mint);
+            font-weight: 700;
+        }
+
+        .stack {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .block {
+            border-radius: 22px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: var(--card);
+            backdrop-filter: blur(12px);
+            padding: 22px 22px 24px;
+            box-shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
+        }
+
+        .block h2 {
+            font-family: 'Unbounded', sans-serif;
+            font-size: 0.88rem;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 12px;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .d1 { background: var(--coral); }
+        .d2 { background: var(--violet); }
+        .d3 { background: var(--sky); }
+        .d4 { background: var(--sun); }
+
+        .block p,
+        .block li {
+            color: var(--muted);
+            line-height: 1.72;
+            font-size: 0.98rem;
+        }
+
+        .block p + p {
+            margin-top: 12px;
+        }
+
+        .block ul {
+            margin-top: 12px;
+            padding-left: 1.2em;
+        }
+
+        .block li {
+            margin-bottom: 8px;
+        }
+
+        .fine {
+            margin-top: 26px;
+            padding: 18px 20px;
+            border-radius: 16px;
+            border: 1px dashed rgba(78, 228, 195, 0.4);
+            background: rgba(78, 228, 195, 0.06);
+            color: var(--muted);
+            font-size: 0.92rem;
+            line-height: 1.65;
+        }
+
+        .fine em {
+            color: var(--text);
+            font-style: normal;
+            font-weight: 600;
+        }
+
+        .back {
+            margin-top: 32px;
+            text-align: center;
+        }
+
+        .back a {
+            font-family: 'Unbounded', sans-serif;
+            font-size: 0.72rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid rgba(255, 107, 74, 0.45);
+            padding-bottom: 3px;
+        }
+
+        .back a:hover {
+            color: #ff9a82;
+            border-bottom-color: #ff9a82;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="layout">
+        <header class="hero">
+            <p class="kicker">Color Match Shot</p>
+            <h1>Privacy information</h1>
+            <p class="sub">
+                This page explains—in everyday language—how the Color Match Shot mobile game treats information when you play. It is a general summary for players, not a contract. Effective date: May 6, 2026.
+            </p>
+            <ul class="snapshot">
+                <li class="pill"><strong>Focus:</strong> offline-friendly puzzle play</li>
+                <li class="pill"><strong>Store:</strong> distributed via the App Store</li>
+                <li class="pill"><strong>Labels:</strong> check the listing when you install or update</li>
+            </ul>
+        </header>
+
+        <div class="stack">
+            <section class="block" aria-labelledby="sec-scope">
+                <h2 id="sec-scope"><span class="dot d1" aria-hidden="true"></span>What this covers</h2>
+                <p>The Color Match Shot application as offered on Apple’s App Store. Hardware features, system backups, and Apple account services follow Apple’s settings and terms—not this page.</p>
+            </section>
+
+            <section class="block" aria-labelledby="sec-collect">
+                <h2 id="sec-collect"><span class="dot d2" aria-hidden="true"></span>Player data collection</h2>
+                <p>According to the App Store privacy details published for this title at the time of this writing, the product is represented as <em>not collecting data</em> in the categories Apple uses for its privacy questionnaire.</p>
+                <p>If a future update changes what the store displays—new features, integrations, or regional requirements—the on-store privacy labels for that version are the disclosure you should rely on when you download or update.</p>
+            </section>
+
+            <section class="block" aria-labelledby="sec-device">
+                <h2 id="sec-device"><span class="dot d3" aria-hidden="true"></span>On-device storage</h2>
+                <p>Like most games, Color Match Shot may keep progress, preferences, or temporary files locally so levels load quickly and your choices persist between sessions. That information ordinarily remains on your device unless you use platform backup or transfer tools outside the app.</p>
+            </section>
+
+            <section class="block" aria-labelledby="sec-platform">
+                <h2 id="sec-platform"><span class="dot d4" aria-hidden="true"></span>Platform, analytics, and ads</h2>
+                <p>Installation, updates, parental controls, and purchases are handled by Apple. If a build includes analytics or advertising components, their behavior is governed by the SDKs present in that release and by the privacy controls available in iOS and iPadOS.</p>
+                <ul>
+                    <li>Review App Tracking Transparency and privacy settings on your device for ad-related choices.</li>
+                    <li>Screen Time and Ask to Buy help guardians manage access for younger players.</li>
+                </ul>
+            </section>
+
+            <section class="block" aria-labelledby="sec-kids">
+                <h2 id="sec-kids"><span class="dot d1" aria-hidden="true"></span>Younger audiences</h2>
+                <p>The game is listed with a family-friendly age rating on the store. Adults should use the device and account tools they already trust to supervise play time and purchases.</p>
+            </section>
+
+            <section class="block" aria-labelledby="sec-changes">
+                <h2 id="sec-changes"><span class="dot d2" aria-hidden="true"></span>Updates to this summary</h2>
+                <p>When gameplay or store disclosures change in a meaningful way, this overview may be revised and the effective date at the top adjusted. Keeping the App Store page open while installing updates is the simplest way to notice label changes.</p>
+            </section>
+        </div>
+
+        <p class="fine">
+            <em>Reminder:</em> This document does not include mailing addresses, email contacts, or links to unrelated services. For the privacy nutrition facts tied to the binary you install, refer to the App Store product page for Color Match Shot at download time.
+        </p>
+
+        <nav class="back" aria-label="Secondary">
+            <a href="index.html">← Back to overview</a>
+        </nav>
+    </div>
+</body>
+
+</html>
